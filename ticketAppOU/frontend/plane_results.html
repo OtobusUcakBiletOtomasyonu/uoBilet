@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uçak Bileti - TicketApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="result-header">
+        <div class="container">
+            <div style="display: flex; align-items: center; padding: 0 10px; margin-bottom: 10px;">
+                <a href="index.html" style="color: white; margin-right: 15px;"><i
+                        class="fa-solid fa-chevron-left"></i></a>
+                <div class="route-info" style="margin: 0;">
+                    Adana (COV) <i class="fa-solid fa-arrow-right-arrow-left route-arrow"
+                        style="font-size: 0.8rem;"></i> Malatya (MLX)
+                </div>
+            </div>
+
+            <div class="date-nav">
+                <button class="date-btn"><i class="fa-solid fa-chevron-left"></i> Önceki</button>
+                <div class="current-date"><i class="fa-regular fa-calendar"></i> 09 Ocak Cuma</div>
+                <button class="date-btn">Sonraki <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="filter-bar">
+        <div class="container" style="display: flex; gap: 10px; overflow-x: auto; padding: 0;">
+            <button class="filter-btn active"><i class="fa-solid fa-arrow-down-short-wide"></i> SIRALA</button>
+            <button class="filter-btn active"><i class="fa-solid fa-sliders"></i> FİLTRE</button>
+            <button class="filter-btn">Aktarmasız</button>
+            <button class="filter-btn">Sadece El Bagajı</button>
+        </div>
+    </div>
+
+    <main class="container" style="padding-top: 20px; padding-bottom: 80px;">
+
+        <!-- Flight Card 1 -->
+        <a href="checkout.html?company=Pegasus&time=22:30&price=2592&origin=Adana (COV)&destination=Malatya (MLX)&date=09 Ocak Cuma&type=plane"
+            class="ticket-card" style="display: block; text-decoration: none; color: inherit;">
+            <div class="ticket-header">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-plane-up" style="color: #f59e0b;"></i>
+                    <span style="font-weight: 600;">Pegasus</span>
+                </div>
+                <div class="ticket-price" style="border: 1px solid #d32f2f; color: #d32f2f; background: white;">2.592 TL
+                </div>
+            </div>
+            <div class="ticket-body">
+                <div class="time-info">
+                    <div class="time">22:30</div>
+                    <div class="location">COV</div>
+                </div>
+                <div class="duration-info">
+                    <div class="duration-line"></div>
+                    <div class="duration-text">9s 30dk</div>
+                    <div style="font-size: 0.7rem; color: var(--text-light); margin-top: 4px;">1 Aktarma (SAW)</div>
+                </div>
+                <div class="time-info">
+                    <div class="time">08:00</div>
+                    <div class="location">MLX</div>
+                </div>
+            </div>
+        </a>
+
+        <!-- Flight Card 2 -->
+        <a href="checkout.html?company=Pegasus&time=18:15&price=2818&origin=Adana (COV)&destination=Malatya (MLX)&date=09 Ocak Cuma&type=plane"
+            class="ticket-card" style="display: block; text-decoration: none; color: inherit;">
+            <div class="ticket-header">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-plane-up" style="color: #f59e0b;"></i>
+                    <span style="font-weight: 600;">Pegasus</span>
+                </div>
+                <div class="ticket-price" style="border: 1px solid #d32f2f; color: #d32f2f; background: white;">2.818 TL
+                </div>
+            </div>
+            <div class="ticket-body">
+                <div class="time-info">
+                    <div class="time">18:15</div>
+                    <div class="location">COV</div>
+                </div>
+                <div class="duration-info">
+                    <div class="duration-line"></div>
+                    <div class="duration-text">13s 45dk</div>
+                    <div style="font-size: 0.7rem; color: var(--text-light); margin-top: 4px;">1 Aktarma (SAW)</div>
+                </div>
+                <div class="time-info">
+                    <div class="time">08:00</div>
+                    <div class="location">MLX</div>
+                </div>
+            </div>
+        </a>
+
+        <!-- Flight Card 3 -->
+        <a href="checkout.html?company=Pegasus&time=07:00&price=2851&origin=Adana (COV)&destination=Malatya (MLX)&date=09 Ocak Cuma&type=plane"
+            class="ticket-card" style="display: block; text-decoration: none; color: inherit;">
+            <div class="ticket-header">
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <i class="fa-solid fa-plane-up" style="color: #f59e0b;"></i>
+                    <span style="font-weight: 600;">Pegasus</span>
+                </div>
+                <div class="ticket-price" style="border: 1px solid #d32f2f; color: #d32f2f; background: white;">2.851 TL
+                </div>
+            </div>
+            <div class="ticket-body">
+                <div class="time-info">
+                    <div class="time">07:00</div>
+                    <div class="location">COV</div>
+                </div>
+                <div class="duration-info">
+                    <div class="duration-line"></div>
+                    <div class="duration-text">14s 50dk</div>
+                    <div style="font-size: 0.7rem; color: var(--text-light); margin-top: 4px;">1 Aktarma (SAW)</div>
+                </div>
+                <div class="time-info">
+                    <div class="time">21:50</div>
+                    <div class="location">MLX</div>
+                </div>
+            </div>
+        </a>
+
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active">
+            <i class="fa-solid fa-magnifying-glass nav-icon"></i>
+            <span>Ara</span>
+        </a>
+        <a href="my_trips.html" class="nav-item">
+            <i class="fa-solid fa-suitcase nav-icon"></i>
+            <span>Seyahatlerim</span>
+        </a>
+        <a href="campaigns.html" class="nav-item">
+            <i class="fa-solid fa-gift nav-icon"></i>
+            <span>Kampanyalar</span>
+        </a>
+        <a href="help.html" class="nav-item">
+            <i class="fa-regular fa-circle-question nav-icon"></i>
+            <span>Yardım</span>
+        </a>
+        <a href="account.html" class="nav-item">
+            <i class="fa-solid fa-user nav-icon"></i>
+            <span>Hesabım</span>
+        </a>
+    </nav>
+</body>
+
+</html>

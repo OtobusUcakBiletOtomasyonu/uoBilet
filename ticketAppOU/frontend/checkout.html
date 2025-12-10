@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ödeme - TicketApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container" style="display: flex; align-items: center; padding: 1rem;">
+            <a href="javascript:history.back()" style="color: white; margin-right: 15px;"><i
+                    class="fa-solid fa-chevron-left"></i></a>
+            <div class="header-title" style="flex: 1; text-align: left;">Sefer Detayları</div>
+        </div>
+    </header>
+
+    <main class="container" style="padding-top: 20px; padding-bottom: 80px;">
+
+        <!-- Trip Summary -->
+        <div class="checkout-section">
+            <div class="section-title">GİDİŞ SEFERİ</div>
+            <div class="info-row">
+                <div class="info-label">Firma</div>
+                <div class="info-value" id="summary-company">Yükleniyor...</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Tarih</div>
+                <div class="info-value" id="summary-date">Yükleniyor...</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Saat</div>
+                <div class="info-value" id="summary-time">Yükleniyor...</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Güzergah</div>
+                <div class="info-value" id="summary-route">Yükleniyor...</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Koltuk</div>
+                <div class="info-value">15</div>
+            </div>
+        </div>
+
+        <!-- Price Info -->
+        <div class="checkout-section">
+            <div class="section-title">FİYAT BİLGİLERİ</div>
+            <div class="info-row">
+                <div class="info-label">Bilet Fiyatı</div>
+                <div class="info-value" id="summary-price">0 TL</div>
+            </div>
+            <div class="info-row"
+                style="margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border-color);">
+                <div class="info-label" style="font-weight: 700; color: var(--text-color);">TOPLAM</div>
+                <div class="info-value" style="font-size: 1.2rem; color: var(--primary-color);" id="summary-total">0 TL
+                </div>
+            </div>
+            <div
+                style="margin-top: 15px; display: flex; align-items: center; gap: 10px; color: var(--primary-color); font-weight: 600; cursor: pointer;">
+                <i class="fa-solid fa-ticket"></i> Kupon Kodu Kullan
+            </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="checkout-section">
+            <div class="section-title">İLETİŞİM BİLGİLERİ</div>
+            <div class="form-group">
+                <label class="form-label">E-Posta</label>
+                <input type="email" class="form-input" placeholder="E-posta adresiniz">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Cep Telefonu</label>
+                <input type="tel" class="form-input" placeholder="5XX XXX XX XX">
+            </div>
+        </div>
+
+        <!-- Passenger Info -->
+        <div class="checkout-section">
+            <div class="section-title">YOLCU BİLGİLERİ</div>
+            <div class="form-group">
+                <label class="form-label">Ad Soyad</label>
+                <input type="text" class="form-input" placeholder="Adınız Soyadınız">
+            </div>
+            <div class="form-group">
+                <label class="form-label">T.C. Kimlik No</label>
+                <input type="text" class="form-input" placeholder="11 haneli TC Kimlik No">
+            </div>
+        </div>
+
+        <!-- Payment -->
+        <div class="checkout-section">
+            <div class="section-title">ÖDEME BİLGİLERİ</div>
+            <div class="payment-form">
+                <div class="card-logos">
+                    <i class="fa-brands fa-cc-visa" style="font-size: 2rem; color: #1a1f71;"></i>
+                    <i class="fa-brands fa-cc-mastercard" style="font-size: 2rem; color: #eb001b;"></i>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Kart Numarası</label>
+                    <input type="text" class="form-input" placeholder="XXXX XXXX XXXX XXXX">
+                </div>
+                <div style="display: flex; gap: 10px;">
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">Son Kul. Tarihi</label>
+                        <input type="text" class="form-input" placeholder="AA/YY">
+                    </div>
+                    <div class="form-group" style="flex: 1;">
+                        <label class="form-label">CVC2</label>
+                        <input type="text" class="form-input" placeholder="XXX">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="pay-btn">
+            <span>Güvenli Ödeme Yap</span>
+            <span id="btn-total">0 TL</span>
+        </button>
+
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fa-solid fa-magnifying-glass nav-icon"></i>
+            <span>Ara</span>
+        </a>
+        <a href="my_trips.html" class="nav-item">
+            <i class="fa-solid fa-suitcase nav-icon"></i>
+            <span>Seyahatlerim</span>
+        </a>
+        <a href="campaigns.html" class="nav-item">
+            <i class="fa-solid fa-gift nav-icon"></i>
+            <span>Kampanyalar</span>
+        </a>
+        <a href="help.html" class="nav-item">
+            <i class="fa-regular fa-circle-question nav-icon"></i>
+            <span>Yardım</span>
+        </a>
+        <a href="account.html" class="nav-item">
+            <i class="fa-solid fa-user nav-icon"></i>
+            <span>Hesabım</span>
+        </a>
+    </nav>
+
+    <script>
+        // Parse URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const company = urlParams.get('company') || 'Bilinmiyor';
+        const time = urlParams.get('time') || '--:--';
+        const price = urlParams.get('price') || '0';
+        const origin = urlParams.get('origin') || 'Nereden';
+        const destination = urlParams.get('destination') || 'Nereye';
+        const date = urlParams.get('date') || 'Tarih Seçilmedi';
+
+        // Update DOM elements
+        document.getElementById('summary-company').textContent = company;
+        document.getElementById('summary-time').textContent = time;
+        document.getElementById('summary-route').textContent = `${origin} - ${destination}`;
+        document.getElementById('summary-date').textContent = date;
+
+        const formattedPrice = `${price} TL`;
+        document.getElementById('summary-price').textContent = formattedPrice;
+        document.getElementById('summary-total').textContent = formattedPrice;
+        document.getElementById('btn-total').textContent = formattedPrice;
+    </script>
+</body>
+
+</html>

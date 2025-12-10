@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesabım - TicketApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-title">Hesabım</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div style="padding: 20px 0; text-align: center;">
+            <h2 style="font-size: 1.2rem;">Merhaba Misafir</h2>
+            <p style="color: var(--text-light); font-size: 0.9rem;">Giriş yap veya üye ol</p>
+            <div style="margin-top: 16px; display: flex; gap: 10px;">
+                <a href="passenger_auth.html" class="btn-primary"
+                    style="text-decoration: none; display: inline-block; width: auto; padding: 8px 24px;">Giriş Yap /
+                    Üye Ol</a>
+                <a href="company_auth.html" class="btn-primary"
+                    style="background-color: var(--secondary-color); text-decoration: none; display: inline-block; width: auto; padding: 8px 24px;">Firma
+                    Girişi</a>
+            </div>
+        </div>
+
+        <div class="account-list">
+            <div class="account-item">
+                <i class="fa-solid fa-route account-icon"></i>
+                <span class="account-text">Seyahatlerim</span>
+                <i class="fa-solid fa-chevron-right account-arrow"></i>
+            </div>
+            <div class="account-item">
+                <i class="fa-solid fa-gift account-icon"></i>
+                <span class="account-text">Kampanyalarım</span>
+                <i class="fa-solid fa-chevron-right account-arrow"></i>
+            </div>
+            <div class="account-item">
+                <i class="fa-regular fa-heart account-icon"></i>
+                <span class="account-text">Favorilerim</span>
+                <i class="fa-solid fa-chevron-right account-arrow"></i>
+            </div>
+            <div class="account-item">
+                <i class="fa-regular fa-bell account-icon"></i>
+                <span class="account-text">Alarmlarım</span>
+                <i class="fa-solid fa-chevron-right account-arrow"></i>
+            </div>
+            <div class="account-item">
+                <i class="fa-regular fa-user account-icon"></i>
+                <span class="account-text">Profilim</span>
+                <i class="fa-solid fa-chevron-right account-arrow"></i>
+            </div>
+            <div class="account-item">
+                <i class="fa-regular fa-circle-question account-icon"></i>
+                <span class="account-text">Yardım</span>
+                <i class="fa-solid fa-chevron-right account-arrow"></i>
+            </div>
+            <div class="account-item">
+                <i class="fa-solid fa-gear account-icon"></i>
+                <span class="account-text">Ayarlar</span>
+                <i class="fa-solid fa-chevron-right account-arrow"></i>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fa-solid fa-magnifying-glass nav-icon"></i>
+            <span>Ara</span>
+        </a>
+        <a href="my_trips.html" class="nav-item">
+            <i class="fa-solid fa-suitcase nav-icon"></i>
+            <span>Seyahatlerim</span>
+        </a>
+        <a href="campaigns.html" class="nav-item">
+            <i class="fa-solid fa-gift nav-icon"></i>
+            <span>Kampanyalar</span>
+        </a>
+        <a href="help.html" class="nav-item">
+            <i class="fa-regular fa-circle-question nav-icon"></i>
+            <span>Yardım</span>
+        </a>
+        <a href="account.html" class="nav-item active">
+            <i class="fa-solid fa-user nav-icon"></i>
+            <span>Hesabım</span>
+        </a>
+    </nav>
+</body>
+
+</html>

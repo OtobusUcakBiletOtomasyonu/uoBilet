@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yolcu Girişi - TicketApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">TicketApp</a>
+                <a href="index.html" class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Ana
+                    Sayfa</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h2>Yolcu Hesabı</h2>
+                <p>Seyahatlerinizi yönetmek için giriş yapın</p>
+            </div>
+
+            <div class="auth-tabs">
+                <button class="auth-tab active" onclick="switchTab('login')">Giriş Yap</button>
+                <button class="auth-tab" onclick="switchTab('register')">Üye Ol</button>
+            </div>
+
+            <div class="auth-body">
+                <!-- Login Form -->
+                <form id="login-form" class="form-section active">
+                    <div class="form-group">
+                        <label class="form-label">E-posta Adresi</label>
+                        <input type="email" class="form-input" placeholder="ornek@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Şifre</label>
+                        <input type="password" class="form-input" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Giriş Yap</button>
+                </form>
+
+                <!-- Register Form -->
+                <form id="register-form" class="form-section">
+                    <div class="form-group">
+                        <label class="form-label">Ad Soyad</label>
+                        <input type="text" class="form-input" placeholder="Adınız Soyadınız" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">E-posta Adresi</label>
+                        <input type="email" class="form-input" placeholder="ornek@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Telefon Numarası</label>
+                        <input type="tel" class="form-input" placeholder="5XX XXX XX XX" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Şifre</label>
+                        <input type="password" class="form-input" placeholder="••••••••" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Üye Ol</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchTab(tab) {
+            // Update tabs
+            document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Update forms
+            document.querySelectorAll('.form-section').forEach(f => f.classList.remove('active'));
+            document.getElementById(tab + '-form').classList.add('active');
+
+            // Update header text based on tab
+            const headerTitle = document.querySelector('.auth-header h2');
+            const headerText = document.querySelector('.auth-header p');
+
+            if (tab === 'login') {
+                headerTitle.textContent = 'Yolcu Girişi';
+                headerText.textContent = 'Seyahatlerinizi yönetmek için giriş yapın';
+            } else {
+                headerTitle.textContent = 'Yolcu Kaydı';
+                headerText.textContent = 'Hızlıca üye olun ve biletinizi alın';
+            }
+        }
+    </script>
+</body>
+
+</html>
