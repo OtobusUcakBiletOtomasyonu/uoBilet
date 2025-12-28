@@ -1,0 +1,204 @@
+/* TripDetailPage.css */
+.trip-detail-page {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--background-default);
+    min-height: calc(100vh - var(--header-height));
+}
+
+.detail-layout {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+    .detail-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+.seat-selection-card {
+    flex: 2;
+    background: white;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-xl);
+}
+
+.summary-card {
+    flex: 1;
+    background: white;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--border-color);
+    padding: var(--spacing-lg);
+    position: sticky;
+    top: 100px;
+}
+
+/* Seat Layout Styles */
+.bus-container {
+    background: #f0f2f5;
+    padding: var(--spacing-lg);
+    border-radius: 40px;
+    width: fit-content;
+    margin: 0 auto;
+    border: 2px solid #e0e0e0;
+    position: relative;
+}
+
+/* Driver Icon */
+.driver-area {
+    text-align: right;
+    margin-bottom: var(--spacing-lg);
+    padding-right: var(--spacing-md);
+    opacity: 0.5;
+}
+
+.seat-grid {
+    display: grid;
+    gap: var(--spacing-sm);
+    /* Default 2+2 layout */
+    grid-template-columns: repeat(5, 1fr);
+    /* 2 seats + aisle + 2 seats */
+}
+
+.seat-grid.layout-2-1 {
+    grid-template-columns: repeat(4, 1fr);
+    /* 2 seats + aisle + 1 seat */
+}
+
+.seat-item {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    background-color: white;
+    border: 1px solid #ccc;
+    color: #333;
+    position: relative;
+}
+
+.seat-item.aisle {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.seat-item:hover:not(.occupied) {
+    border-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* States */
+.seat-item.occupied {
+    cursor: not-allowed;
+    color: white;
+    border: none;
+}
+
+.seat-item.occupied.woman {
+    background-color: #f48fb1;
+    /* Pink */
+}
+
+.seat-item.occupied.man {
+    background-color: #90caf9;
+    /* Blue */
+}
+
+.seat-item.selected {
+    background-color: var(--success-color);
+    /* Green */
+    color: white;
+    border-color: var(--success-color);
+}
+
+.seat-tooltip {
+    display: none;
+    /* Can implement tooltip later */
+}
+
+/* Legend */
+.seat-legend {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
+.legend-box {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.legend-box.woman {
+    background: #f48fb1;
+    border: none;
+}
+
+.legend-box.man {
+    background: #90caf9;
+    border: none;
+}
+
+.legend-box.selected {
+    background: var(--success-color);
+    border: none;
+}
+
+.legend-box.empty {
+    background: white;
+}
+
+/* Gender Selection Modal/Popover */
+.gender-popup {
+    position: absolute;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-md);
+    padding: 8px;
+    box-shadow: var(--shadow-lg);
+    z-index: 100;
+    display: flex;
+    gap: 8px;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gender-btn {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.gender-btn.woman {
+    background: #f48fb1;
+}
+
+.gender-btn.man {
+    background: #90caf9;
+}

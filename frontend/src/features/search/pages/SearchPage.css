@@ -1,0 +1,161 @@
+/* SearchPage.css */
+.search-page {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--background-default);
+    min-height: calc(100vh - var(--header-height));
+}
+
+.search-header {
+    margin-bottom: var(--spacing-lg);
+}
+
+.search-title {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.search-subtitle {
+    color: var(--text-secondary);
+}
+
+.search-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: var(--spacing-lg);
+}
+
+/* Filters Sidebar */
+.filters-sidebar {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--border-color);
+    height: fit-content;
+    position: sticky;
+    top: calc(var(--header-height) + 20px);
+}
+
+.filter-group {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.filter-group:last-child {
+    border-bottom: none;
+}
+
+.filter-title {
+    font-size: var(--font-size-md);
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.filter-input {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius-sm);
+    outline: none;
+}
+
+.filter-input:focus {
+    border-color: var(--primary-color);
+}
+
+/* Trip Card */
+.trip-card {
+    background: white;
+    border-radius: var(--border-radius-lg);
+    border: 1px solid var(--border-color);
+    margin-bottom: var(--spacing-md);
+    transition: all 0.2s ease;
+    overflow: hidden;
+}
+
+.trip-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: #d1d5db;
+}
+
+.trip-content {
+    padding: var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trip-info {
+    display: flex;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.firm-name {
+    font-weight: 700;
+    font-size: var(--font-size-lg);
+    color: var(--text-primary);
+    min-width: 120px;
+}
+
+.trip-time {
+    text-align: center;
+}
+
+.time-val {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.time-label {
+    font-size: var(--font-size-xs);
+    color: var(--text-secondary);
+}
+
+.trip-route {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+}
+
+.trip-action {
+    text-align: right;
+    min-width: 150px;
+}
+
+.trip-price {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.currency {
+    font-size: var(--font-size-sm);
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.select-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--border-radius-md);
+    font-weight: 600;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.select-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Price Slider (Simple) */
+.range-slider {
+    width: 100%;
+}
