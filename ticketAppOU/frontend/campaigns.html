@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kampanyalar - TicketApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body style="background-color: #f5f5f5;">
+
+    <!-- Red Header -->
+    <div class="campaign-header">
+        Kampanyalar
+    </div>
+
+    <!-- Tabs -->
+    <div class="campaign-tabs">
+        <div class="campaign-tab active">Tüm Kampanyalar(29)</div>
+        <div class="campaign-tab">Kupon Kazandıklarım(2)</div>
+    </div>
+
+    <!-- Filters -->
+    <div class="campaign-filters">
+        <div class="campaign-filter active">Tümü</div>
+        <div class="campaign-filter">Otobüs</div>
+        <div class="campaign-filter">Uçak</div>
+        <div class="campaign-filter">Otel</div>
+        <div class="campaign-filter">Araç</div>
+    </div>
+
+    <!-- Campaign List -->
+    <div class="campaign-list" style="padding-bottom: 80px;">
+
+        <!-- Campaign Card 1 -->
+        <div class="campaign-card-new">
+            <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=800&auto=format&fit=crop"
+                class="campaign-img-full" alt="Campaign">
+            <div class="campaign-content-new">
+                <div class="campaign-tag">
+                    <i class="fa-solid fa-plane" style="color: #d32f2f;"></i> Uçak
+                    <i class="fa-solid fa-chevron-right" style="font-size: 0.6rem; margin: 0 4px;"></i>
+                    <i class="fa-solid fa-bed" style="color: #d32f2f;"></i> Otel
+                </div>
+                <div class="campaign-title-new">Uçak Bileti Alana Otel Rezervasyonunda İndirim!</div>
+                <div class="campaign-link">Kampanya detayları</div>
+            </div>
+        </div>
+
+        <!-- Campaign Card 2 -->
+        <div class="campaign-card-new">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=800&auto=format&fit=crop"
+                class="campaign-img-full" alt="Campaign">
+            <div class="campaign-content-new">
+                <div class="campaign-tag">
+                    <i class="fa-solid fa-bus" style="color: #d32f2f;"></i> Otobüs
+                    <i class="fa-solid fa-plane" style="color: #d32f2f; margin-left: 5px;"></i> Uçak
+                </div>
+                <div class="campaign-title-new">Garanti BBVA Gençlik Kampanyası</div>
+                <div class="campaign-link">Kampanya detayları</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fa-solid fa-magnifying-glass nav-icon"></i>
+            <span>Ara</span>
+        </a>
+        <a href="my_trips.html" class="nav-item">
+            <i class="fa-solid fa-suitcase nav-icon"></i>
+            <span>Seyahatlerim</span>
+        </a>
+        <a href="campaigns.html" class="nav-item active">
+            <i class="fa-solid fa-gift nav-icon"></i>
+            <span>Kampanyalar</span>
+        </a>
+        <a href="help.html" class="nav-item">
+            <i class="fa-regular fa-circle-question nav-icon"></i>
+            <span>Yardım</span>
+        </a>
+        <a href="account.html" class="nav-item">
+            <i class="fa-solid fa-user nav-icon"></i>
+            <span>Hesabım</span>
+        </a>
+    </nav>
+
+</body>
+
+</html>

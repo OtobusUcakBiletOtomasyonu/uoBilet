@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-title">TicketApp</div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Search Widget -->
+        <div class="search-widget">
+            <div class="search-tabs">
+                <button class="search-tab active" onclick="switchSearchTab('bus')">
+                    <i class="fa-solid fa-bus"></i> Otobüs
+                </button>
+                <button class="search-tab" onclick="switchSearchTab('plane')">
+                    <i class="fa-solid fa-plane"></i> Uçak
+                </button>
+            </div>
+
+            <div class="search-body">
+                <div class="search-input-group">
+                    <label class="search-label">NEREDEN</label>
+                    <input type="text" class="search-input" value="İstanbul">
+                </div>
+
+                <div class="search-input-group">
+                    <label class="search-label">NEREYE</label>
+                    <input type="text" class="search-input" value="Ankara">
+                </div>
+
+                <div class="search-input-group">
+                    <label class="search-label">TARİH</label>
+                    <input type="date" class="search-input">
+                </div>
+
+                <div class="search-input-group" id="return-date-group" style="display: none;">
+                    <label class="search-label">DÖNÜŞ TARİHİ</label>
+                    <input type="date" class="search-input">
+                </div>
+
+                <button class="search-btn" onclick="performSearch()">Otobüs Bileti Bul</button>
+            </div>
+        </div>
+
+        <!-- Special Offers Preview -->
+        <div style="margin-top: 24px;">
+            <h3 style="margin-bottom: 12px; font-size: 1.1rem;">Öne Çıkan Fırsatlar</h3>
+            <div class="campaign-card">
+                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=800&auto=format&fit=crop"
+                    class="campaign-img" alt="Bus">
+                <div class="campaign-content">
+                    <div class="campaign-title">İlk Bilette %20 İndirim</div>
+                    <div class="campaign-desc">Yeni üyelere özel otobüs biletlerinde geçerli indirim.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item active">
+            <i class="fa-solid fa-magnifying-glass nav-icon"></i>
+            <span>Ara</span>
+        </a>
+        <a href="my_trips.html" class="nav-item">
+            <i class="fa-solid fa-suitcase nav-icon"></i>
+            <span>Seyahatlerim</span>
+        </a>
+        <a href="campaigns.html" class="nav-item">
+            <i class="fa-solid fa-gift nav-icon"></i>
+            <span>Kampanyalar</span>
+        </a>
+        <a href="help.html" class="nav-item">
+            <i class="fa-regular fa-circle-question nav-icon"></i>
+            <span>Yardım</span>
+        </a>
+        <a href="account.html" class="nav-item">
+            <i class="fa-solid fa-user nav-icon"></i>
+            <span>Hesabım</span>
+        </a>
+    </nav>
+
+    <script>
+        let currentType = 'bus';
+
+        function switchSearchTab(type) {
+            currentType = type;
+            document.querySelectorAll('.search-tab').forEach(t => t.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            const btn = document.querySelector('.search-btn');
+            const returnDateGroup = document.getElementById('return-date-group');
+
+            if (type === 'bus') {
+                btn.textContent = 'Otobüs Bileti Bul';
+                returnDateGroup.style.display = 'none';
+            } else {
+                btn.textContent = 'Uçak Bileti Bul';
+                returnDateGroup.style.display = 'block';
+            }
+        }
+
+        function performSearch() {
+            if (currentType === 'bus') {
+                window.location.href = 'bus_results.html';
+            } else {
+                window.location.href = 'plane_results.html';
+            }
+        }
+    </script>
+</body>
+
+</html>

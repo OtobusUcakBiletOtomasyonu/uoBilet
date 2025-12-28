@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otobüs Bileti - TicketApp</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="result-header">
+        <div class="container">
+            <div style="display: flex; align-items: center; padding: 0 10px; margin-bottom: 10px;">
+                <a href="index.html" style="color: white; margin-right: 15px;"><i
+                        class="fa-solid fa-chevron-left"></i></a>
+                <div class="route-info" style="margin: 0;">
+                    Malatya <i class="fa-solid fa-arrow-right-arrow-left route-arrow" style="font-size: 0.8rem;"></i>
+                    Mersin
+                </div>
+            </div>
+
+            <div class="date-nav">
+                <button class="date-btn"><i class="fa-solid fa-chevron-left"></i> Önceki</button>
+                <div class="current-date"><i class="fa-regular fa-calendar"></i> 16 Aralık Salı</div>
+                <button class="date-btn">Sonraki <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="filter-bar">
+        <div class="container" style="display: flex; gap: 10px; overflow-x: auto; padding: 0;">
+            <button class="filter-btn active"><i class="fa-solid fa-arrow-down-short-wide"></i> SIRALA</button>
+            <button class="filter-btn active"><i class="fa-solid fa-sliders"></i> FİLTRE</button>
+            <button class="filter-btn">2+1</button>
+            <button class="filter-btn">Sabaha Karşı</button>
+        </div>
+    </div>
+
+    <main class="container" style="padding-top: 20px; padding-bottom: 80px;">
+
+        <!-- Ticket Card 1 -->
+        <div class="ticket-card">
+            <div class="ticket-header">
+                <div style="font-weight: 800; font-style: italic; color: #006400; font-size: 1.2rem;">ÖZ HAS BİNGÖL
+                </div>
+                <div class="ticket-price">1.000 TL</div>
+            </div>
+            <div class="ticket-body">
+                <div class="time-info">
+                    <div class="time">00:30</div>
+                    <div class="location">Malatya (Maşti)</div>
+                </div>
+                <div class="duration-info">
+                    <div class="duration-line"></div>
+                    <div class="duration-text"><i class="fa-regular fa-clock"></i> 8s</div>
+                </div>
+                <div class="time-info">
+                    <div class="time">08:30</div>
+                    <div class="location">Mersin Otogarı</div>
+                </div>
+            </div>
+            <div class="ticket-footer">
+                <a href="checkout.html?company=ÖZ HAS BİNGÖL&time=00:30&price=1000&origin=Malatya&destination=Mersin&date=16 Aralık Salı"
+                    class="examine-btn" style="text-decoration: none;">İncele <i
+                        class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Ticket Card 2 -->
+        <div class="ticket-card">
+            <div class="ticket-header">
+                <div style="font-weight: 800; font-style: italic; color: #d32f2f; font-size: 1.2rem;">CESUR BİNGÖL</div>
+                <div class="ticket-price">1.000 TL</div>
+            </div>
+            <div class="ticket-body">
+                <div class="time-info">
+                    <div class="time">01:30</div>
+                    <div class="location">Malatya (Maşti)</div>
+                </div>
+                <div class="duration-info">
+                    <div class="duration-line"></div>
+                    <div class="duration-text"><i class="fa-regular fa-clock"></i> 6s 45dk</div>
+                </div>
+                <div class="time-info">
+                    <div class="time">08:15</div>
+                    <div class="location">Mersin Otogarı</div>
+                </div>
+            </div>
+            <div class="ticket-footer">
+                <a href="checkout.html?company=CESUR BİNGÖL&time=01:30&price=1000&origin=Malatya&destination=Mersin&date=16 Aralık Salı"
+                    class="examine-btn" style="text-decoration: none;">İncele <i
+                        class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+        <!-- Ticket Card 3 -->
+        <div class="ticket-card">
+            <div class="ticket-header">
+                <div style="font-weight: 800; font-style: italic; color: #b8860b; font-size: 1.2rem;">YENİ BİNGÖL</div>
+                <div class="ticket-price">1.000 TL</div>
+            </div>
+            <div class="ticket-body">
+                <div class="time-info">
+                    <div class="time">03:30</div>
+                    <div class="location">Malatya (Maşti)</div>
+                </div>
+                <div class="duration-info">
+                    <div class="duration-line"></div>
+                    <div class="duration-text"><i class="fa-regular fa-clock"></i> 8s</div>
+                </div>
+                <div class="time-info">
+                    <div class="time">11:30</div>
+                    <div class="location">Mersin Otogarı</div>
+                </div>
+            </div>
+            <div class="ticket-footer">
+                <a href="checkout.html?company=YENİ BİNGÖL&time=03:30&price=1000&origin=Malatya&destination=Mersin&date=16 Aralık Salı"
+                    class="examine-btn" style="text-decoration: none;">İncele <i
+                        class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fa-solid fa-magnifying-glass nav-icon"></i>
+            <span>Ara</span>
+        </a>
+        <a href="my_trips.html" class="nav-item">
+            <i class="fa-solid fa-suitcase nav-icon"></i>
+            <span>Seyahatlerim</span>
+        </a>
+        <a href="campaigns.html" class="nav-item">
+            <i class="fa-solid fa-gift nav-icon"></i>
+            <span>Kampanyalar</span>
+        </a>
+        <a href="help.html" class="nav-item">
+            <i class="fa-regular fa-circle-question nav-icon"></i>
+            <span>Yardım</span>
+        </a>
+        <a href="account.html" class="nav-item">
+            <i class="fa-solid fa-user nav-icon"></i>
+            <span>Hesabım</span>
+        </a>
+    </nav>
+</body>
+
+</html>
